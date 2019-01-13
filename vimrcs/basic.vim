@@ -30,6 +30,22 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" My changes
+set number
+nnoremap <tab> :bn!<CR>
+nnoremap <S-tab> :bp!<CR>
+
+imap <C-v> <C-r><C-o>+
+set clipboard=unnamed
+set clipboard+=unnamedplus
+
+" Don't reindent clipboard pasted items
+set paste
+
+" End my changes
+
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -139,7 +155,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme gruvbox
 catch
 endtry
 
@@ -151,6 +167,8 @@ if has("gui_running")
     set guioptions-=e
     set t_Co=256
     set guitablabel=%M\ %t
+    set guifont=Ubuntu\ Mono\ 11
+    colorscheme gruvbox
 endif
 
 " Set utf8 as standard encoding and en_US as the standard language
@@ -179,8 +197,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
