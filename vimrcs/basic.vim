@@ -43,6 +43,12 @@ set clipboard+=unnamedplus
 " Don't reindent clipboard pasted items
 set paste
 
+" Autocomplete / Spell check
+
+" ctl-p or ctl-n to autocomplete with dict
+set spell
+set complete+=kspell
+
 " End my changes
 
 
